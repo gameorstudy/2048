@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link href="./assets/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="app">
+        <h1>{{ hint }}</h1>
+        <span>{{ message }}</span>
+        <div class="square-wrapper">
+            <div
+                v-for="(value, index) in dataList"
+                :key="index" 
+                class="square"
+                :style="{ backgroundColor: !!value ? computeHSLColor(Math.log2(value)) : '#cfbeb4' }"
+            >
+                {{ value }}
+            </div>
+        </div>
+        <div class="btn-wrapper">
+            <div
+                v-for="(item, index) in imgList" 
+                :class="item.classData" 
+                @click="handleClick(item.classData)"
+            >
+                <img
+                    :src="item.imageUrl"
+                    :key="index"
+                    :style="item.styleData"
+                />
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+<script>
+    app.mount("#app")
+</script>
+</html>

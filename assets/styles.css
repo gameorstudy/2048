@@ -1,0 +1,91 @@
+#app {
+  width: 600px;
+  padding: 20px 0;
+  margin: 0 auto;
+  background-color: #fbf8ef;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  color: orange;
+  font-family: "Microsoft YaHei";
+}
+
+.square-wrapper {
+  margin: 40px auto 0;
+  width: 480px;
+  height: 480px;
+  background-color: #b7aca6;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px 16px 0 16px;
+  box-sizing: border-box;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #cfbeb4;
+  border-radius: 4px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.square:nth-child(4n + 1),
+.square:nth-child(4n + 2),
+.square:nth-child(4n + 3) {
+  margin-right: 16px;
+}
+
+.btn-wrapper {
+  position: relative;
+}
+
+.btn-wrapper > div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-wrapper > div:hover,
+.btn-wrapper > div:focus {
+  background-color: transparent;
+  border: 1px solid #189eff;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.up {
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 40px);
+}
+
+.right {
+  position: absolute;
+  left: calc(50% + 60px);
+  top: 140px;
+}
+
+.down {
+  position: absolute;
+  left: calc(50% - 40px);
+  top: 240px;
+}
+
+.left {
+  position: absolute;
+  left: calc(50% - 140px);
+  top: 140px;
+}
